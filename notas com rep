@@ -1,0 +1,58 @@
+int A1;
+         int A2; 
+         int A3;
+         int soma;
+         int presenca;
+         int faltasmax=12;
+         double faltas;
+      boolean opcao=true;
+      
+      
+     
+         
+         while(opcao){
+        
+         System.out.println("digite sua nota");
+         A1=entrada.nextInt();
+         while (A1<0||A1>30){
+             System.out.println("invalido");
+             System.out.println("digite outra nota");
+             A1=entrada.nextInt();
+         }
+         System.out.println("digite sua nota");
+         A2=entrada.nextInt();
+         while(A2<0||A2>30){
+             System.out.println("invalido");
+         System.out.println("digite outra nota");
+             A2=entrada.nextInt();}
+         System.out.println("digite sua nota");
+         A3=entrada.nextInt();
+         while(A3<0||A3>40){
+             System.out.println("invalido");
+         System.out.println("digite outra nota");
+             A3=entrada.nextInt();}
+         
+         soma=A1+A2+A3;
+         
+         System.out.println("quantas faltas voce tem ?");
+            faltas=entrada.nextInt();
+            while(faltas>faltasmax){
+                System.out.println("voce reprovou por faltas");}
+            
+        if(soma<=70){
+             System.out.println("voce foi reprovado por notas");
+        }else{
+            System.out.println("voce foi aprovado");}
+            
+           System.out.println("nota final " + soma );
+            double porcentfalta= ( faltas /60 ) *100 ;
+            System.out.println("sua porcentagem de faltas foram " + porcentfalta );
+            
+           System.out.println("deseja continuar s ou n ?");
+           String continuar=entrada.next();
+           if(!continuar.equalsIgnoreCase("s")) {
+               opcao=false;
+             
+            
+         }
+           }}}
